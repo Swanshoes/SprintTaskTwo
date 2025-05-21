@@ -28,3 +28,13 @@ C:\Users\30120458\Downloads\Test\SprintOne\obj\Debug\SprintOne.csproj.GenerateRe
 C:\Users\30120458\Downloads\Test\SprintOne\obj\Debug\SprintOne.csproj.CoreCompileInputs.cache
 C:\Users\30120458\Downloads\Test\SprintOne\obj\Debug\SprintOne.exe
 C:\Users\30120458\Downloads\Test\SprintOne\obj\Debug\SprintOne.pdb
+C:\Users\booth\Source\Repos\SprintTaskTwo\SprintTwo\bin\Debug\SprintOne.exe.config
+C:\Users\booth\Source\Repos\SprintTaskTwo\SprintTwo\bin\Debug\SprintOne.exe
+C:\Users\booth\Source\Repos\SprintTaskTwo\SprintTwo\bin\Debug\SprintOne.pdb
+C:\Users\booth\Source\Repos\SprintTaskTwo\SprintTwo\obj\Debug\SprintOne.csproj.AssemblyReference.cache
+C:\Users\booth\Source\Repos\SprintTaskTwo\SprintTwo\obj\Debug\SprintOne.NeutrinoForm.resources
+C:\Users\booth\Source\Repos\SprintTaskTwo\SprintTwo\obj\Debug\SprintOne.Properties.Resources.resources
+C:\Users\booth\Source\Repos\SprintTaskTwo\SprintTwo\obj\Debug\SprintOne.csproj.GenerateResource.cache
+C:\Users\booth\Source\Repos\SprintTaskTwo\SprintTwo\obj\Debug\SprintOne.csproj.CoreCompileInputs.cache
+C:\Users\booth\Source\Repos\SprintTaskTwo\SprintTwo\obj\Debug\SprintOne.exe
+C:\Users\booth\Source\Repos\SprintTaskTwo\SprintTwo\obj\Debug\SprintOne.pdb

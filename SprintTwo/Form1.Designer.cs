@@ -88,7 +88,7 @@
             // BTNSortAsc
             // 
             this.BTNSortAsc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.BTNSortAsc.Location = new System.Drawing.Point(118, 178);
+            this.BTNSortAsc.Location = new System.Drawing.Point(24, 160);
             this.BTNSortAsc.Name = "BTNSortAsc";
             this.BTNSortAsc.Size = new System.Drawing.Size(117, 42);
             this.BTNSortAsc.TabIndex = 5;
@@ -99,7 +99,7 @@
             // BTNSortDesc
             // 
             this.BTNSortDesc.BackColor = System.Drawing.Color.Lime;
-            this.BTNSortDesc.Location = new System.Drawing.Point(118, 237);
+            this.BTNSortDesc.Location = new System.Drawing.Point(24, 225);
             this.BTNSortDesc.Name = "BTNSortDesc";
             this.BTNSortDesc.Size = new System.Drawing.Size(117, 42);
             this.BTNSortDesc.TabIndex = 6;
