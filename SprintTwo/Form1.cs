@@ -370,14 +370,14 @@ namespace SprintOne
         {
             //function to search for a value in the dataSet array using sequential search and display the index in the searchOutput box
             int searchValue;
-            if (Int32.TryParse(DataSearch.Text, out searchValue))
+            if (Int32.TryParse(sequentialSearchInput.Text, out searchValue))
             {
                 bool found = false;
                 for (int i = 0; i < currentIndex; i++)
                 {
                     if (dataSet[i] == searchValue)
                     {
-                        MessageBox.Show("Value found at index: " + i);
+                        MessageBox.Show("Value found at position: " + (i + 1));
                         found = true;
                         break;
                     }
