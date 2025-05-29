@@ -186,6 +186,7 @@
             this.modeBTN.TabIndex = 13;
             this.modeBTN.Text = "Mode";
             this.modeBTN.UseVisualStyleBackColor = false;
+            this.modeBTN.Click += new System.EventHandler(this.modeBTN_Click);
             // 
             // rangeBTN
             // 
