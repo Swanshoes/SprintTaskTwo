@@ -1,9 +1,11 @@
-﻿// Nathan Booth, Sprint One, Neutrino
-// Date: 20/05/2025
-// Version: 1.01
+﻿// Nathan Booth, SprintTwo, Neutrino
+// Date: 28/05/2025
+// Version: 2.0
 // Neutrino Data Form
 // Program to generate neutrino obersvations and sort them in ascending or descending order.
 // This program allows the user to add, edit, sort, and search for data points in a list of neutrino observations.
+// The newest update adds the core measures of central tendency as calculation buttons as well as a sequential search function
+// to find the index of a specific data point in the list without needing to sort and lose their positions.
 
 
 using System;
@@ -230,6 +232,28 @@ namespace SprintOne
             {
                 MessageBox.Show("Please enter an integer.");
             }
+        }
+
+        private void meanBTN_Click(object sender, EventArgs e)
+        {
+            //function to calculate the mean of the dataSet array and display it in the meanOutput box
+            if (dataSet.Length == 0)
+            {
+                MessageBox.Show("No data to calculate mean.");
+                return;
+            }
+            else
+            {
+                double sum = 0;
+                for (int i = 0; i < currentIndex; i++)
+                {
+                    sum += dataSet[i];
+                }
+                double mean = sum / currentIndex;
+                meanDataOutput.Text = mean.ToString("F2");
+
+            }
+
         }
     }
 }

@@ -162,6 +162,7 @@
             this.meanBTN.TabIndex = 11;
             this.meanBTN.Text = "Mean";
             this.meanBTN.UseVisualStyleBackColor = false;
+            this.meanBTN.Click += new System.EventHandler(this.meanBTN_Click);
             // 
             // medianBTN
             // 
