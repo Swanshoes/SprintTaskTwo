@@ -359,5 +359,32 @@ namespace SprintOne
                 rangeDataOutput.Text = range.ToString();
             }
         }
+
+        private void sequentialSearchBTN_Click(object sender, EventArgs e)
+        {
+            //function to search for a value in the dataSet array using sequential search and display the index in the searchOutput box
+            int searchValue;
+            if (Int32.TryParse(DataSearch.Text, out searchValue))
+            {
+                bool found = false;
+                for (int i = 0; i < currentIndex; i++)
+                {
+                    if (dataSet[i] == searchValue)
+                    {
+                        MessageBox.Show("Value found at index: " + i);
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found)
+                {
+                    MessageBox.Show("Value not found.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter an integer.");
+            }
+        }
     }  
 }

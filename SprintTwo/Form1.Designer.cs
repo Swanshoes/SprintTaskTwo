@@ -208,6 +208,7 @@
             this.sequentialSearchBTN.TabIndex = 15;
             this.sequentialSearchBTN.Text = "Search";
             this.sequentialSearchBTN.UseVisualStyleBackColor = false;
+            this.sequentialSearchBTN.Click += new System.EventHandler(this.sequentialSearchBTN_Click);
             // 
             // meanDataOutput
             // 
