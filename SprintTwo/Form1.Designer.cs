@@ -147,7 +147,7 @@
             // 
             // GenerateRandomData
             // 
-            this.GenerateRandomData.Location = new System.Drawing.Point(118, 4);
+            this.GenerateRandomData.Location = new System.Drawing.Point(201, 12);
             this.GenerateRandomData.Name = "GenerateRandomData";
             this.GenerateRandomData.Size = new System.Drawing.Size(117, 23);
             this.GenerateRandomData.TabIndex = 10;
@@ -175,6 +175,7 @@
             this.medianBTN.TabIndex = 12;
             this.medianBTN.Text = "Median";
             this.medianBTN.UseVisualStyleBackColor = false;
+            this.medianBTN.Click += new System.EventHandler(this.medianBTN_Click);
             // 
             // modeBTN
             // 

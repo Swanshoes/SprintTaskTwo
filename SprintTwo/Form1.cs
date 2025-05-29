@@ -29,7 +29,7 @@ namespace SprintOne
         {
             InitializeComponent();
         }
-                
+
         private int[] dataSet = new int[24];
         private int currentIndex = 0;
 
@@ -105,7 +105,7 @@ namespace SprintOne
         private void BTNSortAsc_Click(object sender, EventArgs e)
         {
             int temp = 0;
-            
+
             //bubble sort the dataSet array onclick
             for (int i = 0; i < currentIndex - 1; i++)
             {
@@ -237,7 +237,7 @@ namespace SprintOne
         private void meanBTN_Click(object sender, EventArgs e)
         {
             //function to calculate the mean of the dataSet array and display it in the meanOutput box
-            if (dataSet.Length == 0)
+            if (currentIndex == 0)
             {
                 MessageBox.Show("No data to calculate mean.");
                 return;
@@ -254,6 +254,39 @@ namespace SprintOne
 
             }
 
+        }
+
+        private void medianBTN_Click(object sender, EventArgs e)
+        {
+            //function to calculate the median of the dataSet array and display it in the medianDataOutput box
+            if (currentIndex == 0)
+            {
+                MessageBox.Show("No data to calculate median.");
+                return;
+            }
+            else
+            {
+                // Sort the array first
+                Array.Sort(dataSet, 0, currentIndex);
+                double median;
+                if (currentIndex % 2 == 0)
+                {
+                    // If even number of elements, average the two middle elements
+                    median = (dataSet[currentIndex / 2 - 1] + dataSet[currentIndex / 2]) / 2.0;
+                }
+                else
+                {
+                    // If odd number of elements, take the middle element
+                    median = dataSet[currentIndex / 2];
+                }
+                medianDataOutput.Text = median.ToString("F2");
+                //clear the list box and replace with sorted array
+                DataListBox.Items.Clear();
+                for (int i = 0; i < currentIndex; i++)
+                {
+                    DataListBox.Items.Add(dataSet[i]);
+                }
+            }
         }
     }
 }
