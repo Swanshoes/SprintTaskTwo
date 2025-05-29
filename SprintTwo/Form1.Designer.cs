@@ -197,6 +197,7 @@
             this.rangeBTN.TabIndex = 14;
             this.rangeBTN.Text = "Range";
             this.rangeBTN.UseVisualStyleBackColor = false;
+            this.rangeBTN.Click += new System.EventHandler(this.rangeBTN_Click);
             // 
             // sequentialSearchBTN
             // 

@@ -330,5 +330,34 @@ namespace SprintOne
                 modeDataOutput.Text = "No mode found"; // If all numbers are unique
             }
         }
+
+        private void rangeBTN_Click(object sender, EventArgs e)
+        {
+            //function to calculate the range of the dataSet array and display it in the rangeDataOutput box
+            if (currentIndex == 0)
+            {
+                MessageBox.Show("No data to calculate range.");
+                return;
+            }
+            else
+            {
+                // Find the minimum and maximum values in the array
+                int min = dataSet[0];
+                int max = dataSet[0];
+                for (int i = 1; i < currentIndex; i++)
+                {
+                    if (dataSet[i] < min)
+                    {
+                        min = dataSet[i];
+                    }
+                    if (dataSet[i] > max)
+                    {
+                        max = dataSet[i];
+                    }
+                }
+                int range = max - min;
+                rangeDataOutput.Text = range.ToString();
+            }
         }
-    }
+    }  
+}
