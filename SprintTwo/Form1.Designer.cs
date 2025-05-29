@@ -51,6 +51,8 @@
             this.rangeDataOutput = new System.Windows.Forms.TextBox();
             this.sequentialSearchInput = new System.Windows.Forms.TextBox();
             this.GeneralToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.midExtremeBTN = new System.Windows.Forms.Button();
+            this.midExtremeDataOutput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // DataInput
@@ -94,7 +96,7 @@
             // BTNSearch
             // 
             this.BTNSearch.BackColor = System.Drawing.Color.LightSalmon;
-            this.BTNSearch.Location = new System.Drawing.Point(291, 239);
+            this.BTNSearch.Location = new System.Drawing.Point(291, 256);
             this.BTNSearch.Name = "BTNSearch";
             this.BTNSearch.Size = new System.Drawing.Size(102, 27);
             this.BTNSearch.TabIndex = 4;
@@ -140,7 +142,7 @@
             // 
             // DataSearch
             // 
-            this.DataSearch.Location = new System.Drawing.Point(409, 243);
+            this.DataSearch.Location = new System.Drawing.Point(409, 260);
             this.DataSearch.Name = "DataSearch";
             this.DataSearch.Size = new System.Drawing.Size(102, 20);
             this.DataSearch.TabIndex = 8;
@@ -168,7 +170,7 @@
             // meanBTN
             // 
             this.meanBTN.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.meanBTN.Location = new System.Drawing.Point(291, 55);
+            this.meanBTN.Location = new System.Drawing.Point(291, 44);
             this.meanBTN.Name = "meanBTN";
             this.meanBTN.Size = new System.Drawing.Size(102, 23);
             this.meanBTN.TabIndex = 11;
@@ -180,7 +182,7 @@
             // medianBTN
             // 
             this.medianBTN.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.medianBTN.Location = new System.Drawing.Point(291, 94);
+            this.medianBTN.Location = new System.Drawing.Point(291, 105);
             this.medianBTN.Name = "medianBTN";
             this.medianBTN.Size = new System.Drawing.Size(102, 23);
             this.medianBTN.TabIndex = 12;
@@ -192,7 +194,7 @@
             // modeBTN
             // 
             this.modeBTN.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.modeBTN.Location = new System.Drawing.Point(291, 134);
+            this.modeBTN.Location = new System.Drawing.Point(291, 137);
             this.modeBTN.Name = "modeBTN";
             this.modeBTN.Size = new System.Drawing.Size(102, 23);
             this.modeBTN.TabIndex = 13;
@@ -216,7 +218,7 @@
             // sequentialSearchBTN
             // 
             this.sequentialSearchBTN.BackColor = System.Drawing.Color.LightSalmon;
-            this.sequentialSearchBTN.Location = new System.Drawing.Point(291, 206);
+            this.sequentialSearchBTN.Location = new System.Drawing.Point(291, 226);
             this.sequentialSearchBTN.Name = "sequentialSearchBTN";
             this.sequentialSearchBTN.Size = new System.Drawing.Size(102, 23);
             this.sequentialSearchBTN.TabIndex = 15;
@@ -227,7 +229,7 @@
             // 
             // meanDataOutput
             // 
-            this.meanDataOutput.Location = new System.Drawing.Point(409, 57);
+            this.meanDataOutput.Location = new System.Drawing.Point(409, 47);
             this.meanDataOutput.Name = "meanDataOutput";
             this.meanDataOutput.ReadOnly = true;
             this.meanDataOutput.Size = new System.Drawing.Size(102, 20);
@@ -236,7 +238,7 @@
             // 
             // medianDataOutput
             // 
-            this.medianDataOutput.Location = new System.Drawing.Point(409, 97);
+            this.medianDataOutput.Location = new System.Drawing.Point(409, 107);
             this.medianDataOutput.Name = "medianDataOutput";
             this.medianDataOutput.ReadOnly = true;
             this.medianDataOutput.Size = new System.Drawing.Size(102, 20);
@@ -245,7 +247,7 @@
             // 
             // modeDataOutput
             // 
-            this.modeDataOutput.Location = new System.Drawing.Point(409, 137);
+            this.modeDataOutput.Location = new System.Drawing.Point(409, 140);
             this.modeDataOutput.Name = "modeDataOutput";
             this.modeDataOutput.ReadOnly = true;
             this.modeDataOutput.Size = new System.Drawing.Size(102, 20);
@@ -263,17 +265,40 @@
             // 
             // sequentialSearchInput
             // 
-            this.sequentialSearchInput.Location = new System.Drawing.Point(409, 209);
+            this.sequentialSearchInput.Location = new System.Drawing.Point(409, 228);
             this.sequentialSearchInput.Name = "sequentialSearchInput";
             this.sequentialSearchInput.Size = new System.Drawing.Size(102, 20);
             this.sequentialSearchInput.TabIndex = 20;
             this.GeneralToolTip.SetToolTip(this.sequentialSearchInput, "Enter a search value to search without sorting data.");
+            // 
+            // midExtremeBTN
+            // 
+            this.midExtremeBTN.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.midExtremeBTN.Location = new System.Drawing.Point(291, 76);
+            this.midExtremeBTN.Name = "midExtremeBTN";
+            this.midExtremeBTN.Size = new System.Drawing.Size(102, 23);
+            this.midExtremeBTN.TabIndex = 21;
+            this.midExtremeBTN.Text = "Mid-Extreme";
+            this.GeneralToolTip.SetToolTip(this.midExtremeBTN, "Click to calculate the mid-extreme of the data set.");
+            this.midExtremeBTN.UseVisualStyleBackColor = false;
+            this.midExtremeBTN.Click += new System.EventHandler(this.midExtremeBTN_Click);
+            // 
+            // midExtremeDataOutput
+            // 
+            this.midExtremeDataOutput.Location = new System.Drawing.Point(409, 78);
+            this.midExtremeDataOutput.Name = "midExtremeDataOutput";
+            this.midExtremeDataOutput.ReadOnly = true;
+            this.midExtremeDataOutput.Size = new System.Drawing.Size(102, 20);
+            this.midExtremeDataOutput.TabIndex = 22;
+            this.GeneralToolTip.SetToolTip(this.midExtremeDataOutput, "Display box for calculating the mid-extreme.");
             // 
             // NeutrinoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 511);
+            this.Controls.Add(this.midExtremeDataOutput);
+            this.Controls.Add(this.midExtremeBTN);
             this.Controls.Add(this.sequentialSearchInput);
             this.Controls.Add(this.rangeDataOutput);
             this.Controls.Add(this.modeDataOutput);
@@ -326,6 +351,8 @@
         private System.Windows.Forms.TextBox rangeDataOutput;
         private System.Windows.Forms.TextBox sequentialSearchInput;
         private System.Windows.Forms.ToolTip GeneralToolTip;
+        private System.Windows.Forms.Button midExtremeBTN;
+        private System.Windows.Forms.TextBox midExtremeDataOutput;
     }
 }
 
