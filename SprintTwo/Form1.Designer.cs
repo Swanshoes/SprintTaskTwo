@@ -121,7 +121,9 @@
             // DataListBox
             // 
             this.DataListBox.FormattingEnabled = true;
+            this.DataListBox.HorizontalScrollbar = true;
             this.DataListBox.Location = new System.Drawing.Point(24, 302);
+            this.DataListBox.MultiColumn = true;
             this.DataListBox.Name = "DataListBox";
             this.DataListBox.Size = new System.Drawing.Size(502, 186);
             this.DataListBox.TabIndex = 7;
