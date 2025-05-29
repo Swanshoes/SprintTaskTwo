@@ -154,6 +154,7 @@ namespace SprintOne
 
         private void GenerateRandomData_Click(object sender, EventArgs e)
         {
+            currentIndex = 0;
             //function to generate and fill the dataSet with 24 random integers
             Random random = new Random();
             for (int i = 0; i < dataSet.Length; i++)
@@ -168,10 +169,15 @@ namespace SprintOne
             {
                 DataListBox.Items.Add(dataSet[i]);
             }
-            //clear the form
+            //clear the form for all text boxes
             DataSearch.Clear();
             DataInput.Clear();
             DataEditInput.Clear();
+            meanDataOutput.Clear();
+            medianDataOutput.Clear();
+            modeDataOutput.Clear();
+            rangeDataOutput.Clear();
+
         }
 
         private void BTNSearch_Click(object sender, EventArgs e)
