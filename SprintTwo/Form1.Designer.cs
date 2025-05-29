@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.DataInput = new System.Windows.Forms.TextBox();
             this.BTNAddData = new System.Windows.Forms.Button();
             this.DataEditInput = new System.Windows.Forms.TextBox();
@@ -49,14 +50,16 @@
             this.modeDataOutput = new System.Windows.Forms.TextBox();
             this.rangeDataOutput = new System.Windows.Forms.TextBox();
             this.sequentialSearchInput = new System.Windows.Forms.TextBox();
+            this.GeneralToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // DataInput
             // 
-            this.DataInput.Location = new System.Drawing.Point(132, 57);
+            this.DataInput.Location = new System.Drawing.Point(132, 58);
             this.DataInput.Name = "DataInput";
             this.DataInput.Size = new System.Drawing.Size(103, 20);
             this.DataInput.TabIndex = 0;
+            this.GeneralToolTip.SetToolTip(this.DataInput, "Values in this field will be added with the add button.");
             // 
             // BTNAddData
             // 
@@ -65,15 +68,17 @@
             this.BTNAddData.Size = new System.Drawing.Size(102, 23);
             this.BTNAddData.TabIndex = 1;
             this.BTNAddData.Text = "Add Data Point";
+            this.GeneralToolTip.SetToolTip(this.BTNAddData, "Click here to add the value from the input box.");
             this.BTNAddData.UseVisualStyleBackColor = true;
             this.BTNAddData.Click += new System.EventHandler(this.BTNAddData_Click);
             // 
             // DataEditInput
             // 
-            this.DataEditInput.Location = new System.Drawing.Point(132, 97);
+            this.DataEditInput.Location = new System.Drawing.Point(132, 94);
             this.DataEditInput.Name = "DataEditInput";
             this.DataEditInput.Size = new System.Drawing.Size(103, 20);
             this.DataEditInput.TabIndex = 2;
+            this.GeneralToolTip.SetToolTip(this.DataEditInput, "Selected values will be displayed here for editing.");
             // 
             // BTNEditData
             // 
@@ -82,6 +87,7 @@
             this.BTNEditData.Size = new System.Drawing.Size(102, 23);
             this.BTNEditData.TabIndex = 3;
             this.BTNEditData.Text = "Edit Data Point";
+            this.GeneralToolTip.SetToolTip(this.BTNEditData, "Press this after selecting and changing a value to make an edit");
             this.BTNEditData.UseVisualStyleBackColor = true;
             this.BTNEditData.Click += new System.EventHandler(this.BTNEditData_Click);
             // 
@@ -93,6 +99,7 @@
             this.BTNSearch.Size = new System.Drawing.Size(102, 27);
             this.BTNSearch.TabIndex = 4;
             this.BTNSearch.Text = "Sort and Search";
+            this.GeneralToolTip.SetToolTip(this.BTNSearch, "Click to sort the data before searching the data for the entered value.");
             this.BTNSearch.UseVisualStyleBackColor = false;
             this.BTNSearch.Click += new System.EventHandler(this.BTNSearch_Click);
             // 
@@ -104,6 +111,7 @@
             this.BTNSortAsc.Size = new System.Drawing.Size(117, 42);
             this.BTNSortAsc.TabIndex = 5;
             this.BTNSortAsc.Text = "Sort Data Asc";
+            this.GeneralToolTip.SetToolTip(this.BTNSortAsc, "Click to sort the data in ascending order.");
             this.BTNSortAsc.UseVisualStyleBackColor = false;
             this.BTNSortAsc.Click += new System.EventHandler(this.BTNSortAsc_Click);
             // 
@@ -115,6 +123,7 @@
             this.BTNSortDesc.Size = new System.Drawing.Size(117, 42);
             this.BTNSortDesc.TabIndex = 6;
             this.BTNSortDesc.Text = "Sort Data Desc";
+            this.GeneralToolTip.SetToolTip(this.BTNSortDesc, "Click to sort the data in descending order.");
             this.BTNSortDesc.UseVisualStyleBackColor = false;
             this.BTNSortDesc.Click += new System.EventHandler(this.BTNSortDesc_Click);
             // 
@@ -135,6 +144,7 @@
             this.DataSearch.Name = "DataSearch";
             this.DataSearch.Size = new System.Drawing.Size(102, 20);
             this.DataSearch.TabIndex = 8;
+            this.GeneralToolTip.SetToolTip(this.DataSearch, "Enter a search value for the sort and search button.");
             // 
             // label1
             // 
@@ -163,6 +173,7 @@
             this.meanBTN.Size = new System.Drawing.Size(102, 23);
             this.meanBTN.TabIndex = 11;
             this.meanBTN.Text = "Mean";
+            this.GeneralToolTip.SetToolTip(this.meanBTN, "Click to calculate the mean of the data set.");
             this.meanBTN.UseVisualStyleBackColor = false;
             this.meanBTN.Click += new System.EventHandler(this.meanBTN_Click);
             // 
@@ -174,6 +185,7 @@
             this.medianBTN.Size = new System.Drawing.Size(102, 23);
             this.medianBTN.TabIndex = 12;
             this.medianBTN.Text = "Median";
+            this.GeneralToolTip.SetToolTip(this.medianBTN, "Click to calculate the median of the data set.");
             this.medianBTN.UseVisualStyleBackColor = false;
             this.medianBTN.Click += new System.EventHandler(this.medianBTN_Click);
             // 
@@ -185,6 +197,7 @@
             this.modeBTN.Size = new System.Drawing.Size(102, 23);
             this.modeBTN.TabIndex = 13;
             this.modeBTN.Text = "Mode";
+            this.GeneralToolTip.SetToolTip(this.modeBTN, "Click to calculate the mode of the data set.");
             this.modeBTN.UseVisualStyleBackColor = false;
             this.modeBTN.Click += new System.EventHandler(this.modeBTN_Click);
             // 
@@ -196,6 +209,7 @@
             this.rangeBTN.Size = new System.Drawing.Size(102, 23);
             this.rangeBTN.TabIndex = 14;
             this.rangeBTN.Text = "Range";
+            this.GeneralToolTip.SetToolTip(this.rangeBTN, "Click to calculate the range of the data set.");
             this.rangeBTN.UseVisualStyleBackColor = false;
             this.rangeBTN.Click += new System.EventHandler(this.rangeBTN_Click);
             // 
@@ -207,43 +221,53 @@
             this.sequentialSearchBTN.Size = new System.Drawing.Size(102, 23);
             this.sequentialSearchBTN.TabIndex = 15;
             this.sequentialSearchBTN.Text = "Search";
+            this.GeneralToolTip.SetToolTip(this.sequentialSearchBTN, "Click to search for the input value without sorting the data.");
             this.sequentialSearchBTN.UseVisualStyleBackColor = false;
             this.sequentialSearchBTN.Click += new System.EventHandler(this.sequentialSearchBTN_Click);
             // 
             // meanDataOutput
             // 
-            this.meanDataOutput.Location = new System.Drawing.Point(409, 55);
+            this.meanDataOutput.Location = new System.Drawing.Point(409, 57);
             this.meanDataOutput.Name = "meanDataOutput";
+            this.meanDataOutput.ReadOnly = true;
             this.meanDataOutput.Size = new System.Drawing.Size(102, 20);
             this.meanDataOutput.TabIndex = 16;
+            this.GeneralToolTip.SetToolTip(this.meanDataOutput, "Display box for calculating the mean.");
             // 
             // medianDataOutput
             // 
-            this.medianDataOutput.Location = new System.Drawing.Point(409, 94);
+            this.medianDataOutput.Location = new System.Drawing.Point(409, 97);
             this.medianDataOutput.Name = "medianDataOutput";
+            this.medianDataOutput.ReadOnly = true;
             this.medianDataOutput.Size = new System.Drawing.Size(102, 20);
             this.medianDataOutput.TabIndex = 17;
+            this.GeneralToolTip.SetToolTip(this.medianDataOutput, "Display box for calculating the median.");
             // 
             // modeDataOutput
             // 
-            this.modeDataOutput.Location = new System.Drawing.Point(409, 134);
+            this.modeDataOutput.Location = new System.Drawing.Point(409, 137);
             this.modeDataOutput.Name = "modeDataOutput";
+            this.modeDataOutput.ReadOnly = true;
             this.modeDataOutput.Size = new System.Drawing.Size(102, 20);
             this.modeDataOutput.TabIndex = 18;
+            this.GeneralToolTip.SetToolTip(this.modeDataOutput, "Display box for calculating the mode.");
             // 
             // rangeDataOutput
             // 
-            this.rangeDataOutput.Location = new System.Drawing.Point(409, 169);
+            this.rangeDataOutput.Location = new System.Drawing.Point(409, 172);
             this.rangeDataOutput.Name = "rangeDataOutput";
+            this.rangeDataOutput.ReadOnly = true;
             this.rangeDataOutput.Size = new System.Drawing.Size(102, 20);
             this.rangeDataOutput.TabIndex = 19;
+            this.GeneralToolTip.SetToolTip(this.rangeDataOutput, "Display box for calculating the range.");
             // 
             // sequentialSearchInput
             // 
-            this.sequentialSearchInput.Location = new System.Drawing.Point(409, 206);
+            this.sequentialSearchInput.Location = new System.Drawing.Point(409, 209);
             this.sequentialSearchInput.Name = "sequentialSearchInput";
             this.sequentialSearchInput.Size = new System.Drawing.Size(102, 20);
             this.sequentialSearchInput.TabIndex = 20;
+            this.GeneralToolTip.SetToolTip(this.sequentialSearchInput, "Enter a search value to search without sorting data.");
             // 
             // NeutrinoForm
             // 
@@ -301,6 +325,7 @@
         private System.Windows.Forms.TextBox modeDataOutput;
         private System.Windows.Forms.TextBox rangeDataOutput;
         private System.Windows.Forms.TextBox sequentialSearchInput;
+        private System.Windows.Forms.ToolTip GeneralToolTip;
     }
 }
 
