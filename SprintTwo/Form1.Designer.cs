@@ -39,18 +39,28 @@
             this.DataSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.GenerateRandomData = new System.Windows.Forms.Button();
+            this.meanBTN = new System.Windows.Forms.Button();
+            this.medianBTN = new System.Windows.Forms.Button();
+            this.modeBTN = new System.Windows.Forms.Button();
+            this.rangeBTN = new System.Windows.Forms.Button();
+            this.sequentialSearchBTN = new System.Windows.Forms.Button();
+            this.meanDataOutput = new System.Windows.Forms.TextBox();
+            this.medianDataOutput = new System.Windows.Forms.TextBox();
+            this.modeDataOutput = new System.Windows.Forms.TextBox();
+            this.rangeDataOutput = new System.Windows.Forms.TextBox();
+            this.sequentialSearchInput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // DataInput
             // 
-            this.DataInput.Location = new System.Drawing.Point(132, 36);
+            this.DataInput.Location = new System.Drawing.Point(132, 57);
             this.DataInput.Name = "DataInput";
-            this.DataInput.Size = new System.Drawing.Size(197, 20);
+            this.DataInput.Size = new System.Drawing.Size(103, 20);
             this.DataInput.TabIndex = 0;
             // 
             // BTNAddData
             // 
-            this.BTNAddData.Location = new System.Drawing.Point(24, 33);
+            this.BTNAddData.Location = new System.Drawing.Point(24, 55);
             this.BTNAddData.Name = "BTNAddData";
             this.BTNAddData.Size = new System.Drawing.Size(102, 23);
             this.BTNAddData.TabIndex = 1;
@@ -60,14 +70,14 @@
             // 
             // DataEditInput
             // 
-            this.DataEditInput.Location = new System.Drawing.Point(132, 74);
+            this.DataEditInput.Location = new System.Drawing.Point(132, 97);
             this.DataEditInput.Name = "DataEditInput";
-            this.DataEditInput.Size = new System.Drawing.Size(197, 20);
+            this.DataEditInput.Size = new System.Drawing.Size(103, 20);
             this.DataEditInput.TabIndex = 2;
             // 
             // BTNEditData
             // 
-            this.BTNEditData.Location = new System.Drawing.Point(24, 72);
+            this.BTNEditData.Location = new System.Drawing.Point(24, 94);
             this.BTNEditData.Name = "BTNEditData";
             this.BTNEditData.Size = new System.Drawing.Size(102, 23);
             this.BTNEditData.TabIndex = 3;
@@ -77,18 +87,19 @@
             // 
             // BTNSearch
             // 
-            this.BTNSearch.Location = new System.Drawing.Point(24, 115);
+            this.BTNSearch.BackColor = System.Drawing.Color.LightSalmon;
+            this.BTNSearch.Location = new System.Drawing.Point(291, 239);
             this.BTNSearch.Name = "BTNSearch";
             this.BTNSearch.Size = new System.Drawing.Size(102, 27);
             this.BTNSearch.TabIndex = 4;
-            this.BTNSearch.Text = "Search Data";
-            this.BTNSearch.UseVisualStyleBackColor = true;
+            this.BTNSearch.Text = "Sort and Search";
+            this.BTNSearch.UseVisualStyleBackColor = false;
             this.BTNSearch.Click += new System.EventHandler(this.BTNSearch_Click);
             // 
             // BTNSortAsc
             // 
             this.BTNSortAsc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.BTNSortAsc.Location = new System.Drawing.Point(24, 160);
+            this.BTNSortAsc.Location = new System.Drawing.Point(76, 159);
             this.BTNSortAsc.Name = "BTNSortAsc";
             this.BTNSortAsc.Size = new System.Drawing.Size(117, 42);
             this.BTNSortAsc.TabIndex = 5;
@@ -99,7 +110,7 @@
             // BTNSortDesc
             // 
             this.BTNSortDesc.BackColor = System.Drawing.Color.Lime;
-            this.BTNSortDesc.Location = new System.Drawing.Point(24, 225);
+            this.BTNSortDesc.Location = new System.Drawing.Point(76, 207);
             this.BTNSortDesc.Name = "BTNSortDesc";
             this.BTNSortDesc.Size = new System.Drawing.Size(117, 42);
             this.BTNSortDesc.TabIndex = 6;
@@ -112,15 +123,15 @@
             this.DataListBox.FormattingEnabled = true;
             this.DataListBox.Location = new System.Drawing.Point(24, 302);
             this.DataListBox.Name = "DataListBox";
-            this.DataListBox.Size = new System.Drawing.Size(305, 186);
+            this.DataListBox.Size = new System.Drawing.Size(502, 186);
             this.DataListBox.TabIndex = 7;
             this.DataListBox.SelectedIndexChanged += new System.EventHandler(this.DataListBox_SelectedIndexChanged);
             // 
             // DataSearch
             // 
-            this.DataSearch.Location = new System.Drawing.Point(133, 121);
+            this.DataSearch.Location = new System.Drawing.Point(409, 243);
             this.DataSearch.Name = "DataSearch";
-            this.DataSearch.Size = new System.Drawing.Size(196, 20);
+            this.DataSearch.Size = new System.Drawing.Size(102, 20);
             this.DataSearch.TabIndex = 8;
             // 
             // label1
@@ -142,11 +153,106 @@
             this.GenerateRandomData.UseVisualStyleBackColor = true;
             this.GenerateRandomData.Click += new System.EventHandler(this.GenerateRandomData_Click);
             // 
+            // meanBTN
+            // 
+            this.meanBTN.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.meanBTN.Location = new System.Drawing.Point(291, 55);
+            this.meanBTN.Name = "meanBTN";
+            this.meanBTN.Size = new System.Drawing.Size(102, 23);
+            this.meanBTN.TabIndex = 11;
+            this.meanBTN.Text = "Mean";
+            this.meanBTN.UseVisualStyleBackColor = false;
+            // 
+            // medianBTN
+            // 
+            this.medianBTN.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.medianBTN.Location = new System.Drawing.Point(291, 94);
+            this.medianBTN.Name = "medianBTN";
+            this.medianBTN.Size = new System.Drawing.Size(102, 23);
+            this.medianBTN.TabIndex = 12;
+            this.medianBTN.Text = "Median";
+            this.medianBTN.UseVisualStyleBackColor = false;
+            // 
+            // modeBTN
+            // 
+            this.modeBTN.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.modeBTN.Location = new System.Drawing.Point(291, 134);
+            this.modeBTN.Name = "modeBTN";
+            this.modeBTN.Size = new System.Drawing.Size(102, 23);
+            this.modeBTN.TabIndex = 13;
+            this.modeBTN.Text = "Mode";
+            this.modeBTN.UseVisualStyleBackColor = false;
+            // 
+            // rangeBTN
+            // 
+            this.rangeBTN.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.rangeBTN.Location = new System.Drawing.Point(291, 169);
+            this.rangeBTN.Name = "rangeBTN";
+            this.rangeBTN.Size = new System.Drawing.Size(102, 23);
+            this.rangeBTN.TabIndex = 14;
+            this.rangeBTN.Text = "Range";
+            this.rangeBTN.UseVisualStyleBackColor = false;
+            // 
+            // sequentialSearchBTN
+            // 
+            this.sequentialSearchBTN.BackColor = System.Drawing.Color.LightSalmon;
+            this.sequentialSearchBTN.Location = new System.Drawing.Point(291, 206);
+            this.sequentialSearchBTN.Name = "sequentialSearchBTN";
+            this.sequentialSearchBTN.Size = new System.Drawing.Size(102, 23);
+            this.sequentialSearchBTN.TabIndex = 15;
+            this.sequentialSearchBTN.Text = "Search";
+            this.sequentialSearchBTN.UseVisualStyleBackColor = false;
+            // 
+            // meanDataOutput
+            // 
+            this.meanDataOutput.Location = new System.Drawing.Point(409, 55);
+            this.meanDataOutput.Name = "meanDataOutput";
+            this.meanDataOutput.Size = new System.Drawing.Size(102, 20);
+            this.meanDataOutput.TabIndex = 16;
+            // 
+            // medianDataOutput
+            // 
+            this.medianDataOutput.Location = new System.Drawing.Point(409, 94);
+            this.medianDataOutput.Name = "medianDataOutput";
+            this.medianDataOutput.Size = new System.Drawing.Size(102, 20);
+            this.medianDataOutput.TabIndex = 17;
+            // 
+            // modeDataOutput
+            // 
+            this.modeDataOutput.Location = new System.Drawing.Point(409, 134);
+            this.modeDataOutput.Name = "modeDataOutput";
+            this.modeDataOutput.Size = new System.Drawing.Size(102, 20);
+            this.modeDataOutput.TabIndex = 18;
+            // 
+            // rangeDataOutput
+            // 
+            this.rangeDataOutput.Location = new System.Drawing.Point(409, 169);
+            this.rangeDataOutput.Name = "rangeDataOutput";
+            this.rangeDataOutput.Size = new System.Drawing.Size(102, 20);
+            this.rangeDataOutput.TabIndex = 19;
+            // 
+            // sequentialSearchInput
+            // 
+            this.sequentialSearchInput.Location = new System.Drawing.Point(409, 206);
+            this.sequentialSearchInput.Name = "sequentialSearchInput";
+            this.sequentialSearchInput.Size = new System.Drawing.Size(102, 20);
+            this.sequentialSearchInput.TabIndex = 20;
+            // 
             // NeutrinoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 511);
+            this.ClientSize = new System.Drawing.Size(549, 511);
+            this.Controls.Add(this.sequentialSearchInput);
+            this.Controls.Add(this.rangeDataOutput);
+            this.Controls.Add(this.modeDataOutput);
+            this.Controls.Add(this.medianDataOutput);
+            this.Controls.Add(this.meanDataOutput);
+            this.Controls.Add(this.sequentialSearchBTN);
+            this.Controls.Add(this.rangeBTN);
+            this.Controls.Add(this.modeBTN);
+            this.Controls.Add(this.medianBTN);
+            this.Controls.Add(this.meanBTN);
             this.Controls.Add(this.GenerateRandomData);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DataSearch);
@@ -178,6 +284,16 @@
         private System.Windows.Forms.TextBox DataSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button GenerateRandomData;
+        private System.Windows.Forms.Button meanBTN;
+        private System.Windows.Forms.Button medianBTN;
+        private System.Windows.Forms.Button modeBTN;
+        private System.Windows.Forms.Button rangeBTN;
+        private System.Windows.Forms.Button sequentialSearchBTN;
+        private System.Windows.Forms.TextBox meanDataOutput;
+        private System.Windows.Forms.TextBox medianDataOutput;
+        private System.Windows.Forms.TextBox modeDataOutput;
+        private System.Windows.Forms.TextBox rangeDataOutput;
+        private System.Windows.Forms.TextBox sequentialSearchInput;
     }
 }
 
