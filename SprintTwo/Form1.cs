@@ -297,43 +297,44 @@ namespace SprintOne
 
         private void modeBTN_Click(object sender, EventArgs e)
         {
-            //function to calculate the mode from the dataSet array and display it in the modeDataOutput box
             if (currentIndex == 0)
             {
                 MessageBox.Show("No data to calculate mode.");
                 return;
             }
+
             Dictionary<int, int> frequency = new Dictionary<int, int>();
-            // Count the frequency of each number
+
+            // Count frequency of each number
             for (int i = 0; i < currentIndex; i++)
             {
                 if (frequency.ContainsKey(dataSet[i]))
-                {
                     frequency[dataSet[i]]++;
-                }
                 else
-                {
                     frequency[dataSet[i]] = 1;
-                }
             }
-            // Find the number with the highest frequency
-            int mode = dataSet[0];
-            int maxCount = 0;
+
+            // Find the maximum frequency
+            int maxCount = frequency.Values.Max();
+
+            // Collect all numbers with that max frequency
+            List<int> modes = new List<int>();
             foreach (var pair in frequency)
             {
-                if (pair.Value > maxCount)
+                if (pair.Value == maxCount)
                 {
-                    maxCount = pair.Value;
-                    mode = pair.Key;
+                    modes.Add(pair.Key);
                 }
             }
+
+            // Output the result
             if (maxCount > 1)
             {
-                modeDataOutput.Text = mode.ToString();
+                modeDataOutput.Text = string.Join(", ", modes);
             }
             else
             {
-                modeDataOutput.Text = "No mode found"; // If all numbers are unique
+                modeDataOutput.Text = "No mode found"; // All values unique
             }
         }
 
